@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exclusive Access</title>
+
+<!-- ========== TAMBAHAN PREVIEW GAMBAR & TITLE ========== -->
+<meta property="og:title" content="🟢CONTACT ME📲Chat with me by📞👆🏻" />
+<meta property="og:description" content="Tap below to continue. Limited access available. Watch now!" />
+<meta property="og:image" content="https://res.cloudinary.com/dghz5nlrt/image/upload/v1782575504/2916690897186146321_apip7o.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://wendy-856942.happy-talking.org/be/olb57hLihkV" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="🟢CONTACT ME📲Chat with me by📞👆🏻" />
+<meta name="twitter:description" content="Tap below to continue. Limited access available." />
+<meta name="twitter:image" content="https://res.cloudinary.com/dghz5nlrt/image/upload/v1782575504/2916690897186146321_apip7o.jpg" />
+<!-- ===================================================== -->
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
+
+body{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:#fff;
+  text-align:center;
+  overflow:hidden;
+}
+
+/* VIDEO */
+.bg-video{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  z-index:-2;
+}
+
+/* OVERLAY */
+.overlay{
+  position:fixed;
+  inset:0;
+  background:linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.3));
+  z-index:-1;
+}
+
+/* BOX */
+.content{
+  position:relative;
+  z-index:10;
+  max-width:400px;
+  padding:25px;
+  border-radius:20px;
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(15px);
+  border:1px solid rgba(255,255,255,0.2);
+  box-shadow:0 10px 40px rgba(0,0,0,0.5);
+  animation:fadeUp 1s ease forwards;
+}
+
+h1{font-size:24px;margin-bottom:10px}
+p{font-size:14px;opacity:.9}
+
+.cta{
+  display:block;
+  margin-top:20px;
+  padding:14px;
+  background:#ff0050;
+  color:#fff;
+  font-weight:bold;
+  border-radius:10px;
+  text-decoration:none;
+  font-size:16px;
+  animation:pulse 2s infinite;
+}
+
+.bottom-bar{
+  position:fixed;
+  bottom:0;
+  width:100%;
+  padding:15px;
+  background:rgba(0,0,0,0.9);
+}
+
+.bottom-bar a{
+  display:block;
+  background:#22c55e;
+  padding:15px;
+  border-radius:8px;
+  color:#000;
+  font-weight:bold;
+  text-decoration:none;
+}
+
+.timer{margin-top:10px;font-size:13px;color:#facc15}
+
+/* ANIMASI */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(30px)}
+  to{opacity:1;transform:translateY(0)}
+}
+@keyframes pulse{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.05)}
+  100%{transform:scale(1)}
+}
+</style>
+</head>
+
+<body>
+
+<video autoplay muted loop playsinline class="bg-video" id="bgVideo"></video>
+
+<div class="overlay"></div>
+
+<div class="content">
+<h1 id="title">Watch the Full Video Now</h1>
+<p id="desc">Tap below to continue. Limited access available.</p>
+
+<div class="timer" id="countdown">Loading...</div>
+
+<a href="https://melissa-473703.spiod.sbs/be/tTAA5OeHAQwn9g3SLpozx7KEJ" class="cta" id="btn">Continue</a>
+</div>
+
+<div class="bottom-bar">
+<a href="https://eden-789898.spiod.sbs/be/WBvsghCfHx8rMxX" id="unlock">Unlock Access</a>
+</div>
+
+<script>
+// 🎬 LIST VIDEO (ISI PUNYA LO)
+const videos = [
+  "pideo/crot1.mp4",
+  "pideo/crot2.mp4",
+  "pideo/crot3.mp4",
+  "pideo/crot4.mp4"
+];
+
+const videoEl = document.getElementById("bgVideo");
+
+// 🔁 LOAD RANDOM
+function loadRandomVideo(){
+  const random = videos[Math.floor(Math.random() * videos.length)];
+  videoEl.src = random;
+}
+
+// ❌ KALAU ERROR → COBA VIDEO LAIN
+videoEl.addEventListener("error", () => {
+  console.log("Video error, ganti...");
+  loadRandomVideo();
+});
+
+// LOAD PERTAMA
+loadRandomVideo();
+
+
+// ⏳ TIMER
+let time=180;
+const el=document.getElementById("countdown");
+
+setInterval(()=>{
+ let m=Math.floor(time/60);
+ let s=time%60;
+ el.innerText=`Expires in ${m}:${s<10?'0':''}${s}`;
+ if(time>0) time--;
+},1000);
+
+
+// 🌍 MULTI BAHASA
+const lang=(navigator.language||"en").toLowerCase();
+
+const text={
+ en:{title:"Watch the Full Video Now",desc:"Tap below to continue. Limited access available.",btn:"Continue",unlock:"Unlock Access"},
+ de:{title:"Sieh dir jetzt das komplette Video an",desc:"Tippe unten, um fortzufahren.",btn:"Weiter",unlock:"Zugang freischalten"},
+ fr:{title:"Regardez la vidéo complète maintenant",desc:"Appuyez ci-dessous pour continuer.",btn:"Continuer",unlock:"Débloquer l'accès"},
+ es:{title:"Mira el video completo ahora",desc:"Toca abajo para continuar.",btn:"Continuar",unlock:"Desbloquear acceso"},
+ it:{title:"Guarda il video completo ora",desc:"Tocca sotto per continuare.",btn:"Continua",unlock:"Sblocca accesso"}
+};
+
+let current="en";
+for(let key in text){
+ if(lang.startsWith(key)){
+   current=key;
+   break;
+ }
+}
+
+document.getElementById("title").innerText=text[current].title;
+document.getElementById("desc").innerText=text[current].desc;
+document.getElementById("btn").innerText=text[current].btn;
+document.getElementById("unlock").innerText=text[current].unlock;
+
+</script>
+
+</body>
+</html>
